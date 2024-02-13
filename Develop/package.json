@@ -1,13 +1,13 @@
 {
-  "name": "note-taker",
+  "name": "notation-application",
   "version": "1.0.0",
-  "description": "",
+  "description": "An express powered notation app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jeremy Doran",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4"
   }
