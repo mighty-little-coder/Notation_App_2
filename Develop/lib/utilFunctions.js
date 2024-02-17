@@ -7,7 +7,7 @@ function createNewNote(body, notesArray) {
     notesArray.push(note);
 
     fs.writeFileSync(
-        path.join(__dirname, '../db/db.json'),
+        path.join(__dirname, '../db/notesDb.json'),
         JSON.stringify({
             notes: notesArray
         }, null, 2)
@@ -26,15 +26,29 @@ function deleteNote(notesArray, id) {
     }
 
     fs.writeFileSync(
-        path.join(__dirname, '../db/db.json'),
+        path.join(__dirname, '../db/notesDb.json'),
         JSON.stringify({
             notes: notesArray
         }, null, 2)
     )
 }
 
+function readFromFile() {
+    return fs.readFileSync(path.join(__dirname, '../db/notesDb.json'), 'utf8');
+}
+
+function readAndAppend() {
+    return fs.readFileSync(path.join(__dirname, '../db/notesDb.json'), 'utf8');
+}
+
+function uuid() {
+    return fs.readFileSync(path.join(__dirname, '../db/notesDb.json'), 'utf8');
+}
 
 module.exports = {
     createNewNote,
-    deleteNote
+    deleteNote,
+    readFromFile,
+    readAndAppend,
+    uuid
 };
